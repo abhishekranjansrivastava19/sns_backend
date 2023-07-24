@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser')
 const morgan = require('morgan');
-
+const PORT = process.env.PORT || 3000
 
 
 app.use(cors());
@@ -67,7 +67,7 @@ const db = mongoose.connect(`mongodb+srv://${userName}:${password}@qaupsc.muehwm
 
 // server
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('server is running http://localhost:3000');
 });
 
